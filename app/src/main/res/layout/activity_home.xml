@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBackArrow"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/red"
+            android:layout_margin="@dimen/margin_medium_2"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivChat"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            android:src="@mipmap/chatactive" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@mipmap/currency"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_toStartOf="@id/ivChat"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLocationName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Furama Riverfront,\nSingapore"
+            android:layout_below="@id/ivBackArrow"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:fontFamily="@font/encoded_sans_bold"
+            android:textSize="@dimen/text_regular_3x"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLocationDetail"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@id/tvLocationName"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:src="@mipmap/nextred" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLocationAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="404 Havelock Road, Singpore 169633"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_below="@id/tvLocationName"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:fontFamily="@font/encoded_sans_regular"
+            android:textSize="@dimen/text_regular"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLocationPointer"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@id/tvLocationAddress"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:src="@mipmap/currentlocation" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvImageList"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:clipToPadding="false"
+            android:paddingEnd="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_below="@id/tvLocationAddress"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            tools:itemCount="4"
+            tools:listitem="@layout/view_holder_image"
+            />
+
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@id/rvImageList"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="-18dp"
+            android:background="@drawable/bg_page_count"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:text="See All 2 / 68"
+                android:textSize="@dimen/text_small"
+                android:fontFamily="@font/encoded_sans_regular"
+                />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutFeatureGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rvImageList"
+            android:layout_marginTop="@dimen/margin_large"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@mipmap/theme" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/encoded_sans_regular"
+                    android:textSize="@dimen/text_small"
+                    android:text="Amenities"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@mipmap/workout" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/encoded_sans_regular"
+                    android:textSize="@dimen/text_small"
+                    android:text="Facilities"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@mipmap/fnb" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/encoded_sans_regular"
+                    android:textSize="@dimen/text_small"
+                    android:text="F&amp;B"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@mipmap/kidsfamily" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/encoded_sans_regular"
+                    android:textSize="@dimen/text_small"
+                    android:text="Family"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@mipmap/wellness" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/encoded_sans_regular"
+                    android:textSize="@dimen/text_small"
+                    android:text="Wellness"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleRoomRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            android:layout_below="@id/layoutFeatureGroup"
+            android:layout_marginTop="@dimen/margin_large"
+            app:checkedButton="@id/btnRoom"
+            app:singleSelection="true">
+
+            <Button
+                style="@style/MyButtonStyle"
+                android:id="@+id/btnRoom"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:text="By Room" />
+
+            <Button
+                style="@style/MyButtonStyle"
+                android:id="@+id/btnRate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="By Rate" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRoomRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toggleRoomRate"
+            android:paddingBottom="@dimen/margin_medium_2"
+            android:clipToPadding="true"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            tools:itemCount="4"
+            tools:listitem="@layout/view_holder_room"/>
+
+
+    </RelativeLayout>
+
+
+
+
+</ScrollView>

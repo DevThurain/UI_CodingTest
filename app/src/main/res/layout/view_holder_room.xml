@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_medium_2"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivCover"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginHorizontal="@dimen/margin_medium_2"
+        app:srcCompat="@drawable/photo_four"
+        android:scaleType="centerCrop" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRoomName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deluxe Twin"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:textColor="@color/black"
+        android:layout_below="@id/ivCover"
+        android:fontFamily="@font/encoded_sans_semi_bold"
+        android:textSize="@dimen/text_regular_2x"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRoomFacilities"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Twin Single Beds, Cable, TV, Free Wifi"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textColor="@color/grey"
+        android:layout_below="@id/tvRoomName"
+        android:fontFamily="@font/encoded_sans_regular"
+        android:textSize="@dimen/text_small"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tvRoomFacilities"
+        android:layout_alignParentEnd="true"
+        android:text="View Rates"
+        app:backgroundTint="@null"
+        android:textColor="@color/red"
+        android:background="@drawable/background_button"
+        android:layout_marginEnd="@dimen/margin_medium_2"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRoomAverage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Avg. Night / Room From"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginTop="@dimen/margin_large"
+        android:textColor="@color/black"
+        android:layout_below="@id/tvRoomFacilities"
+        android:fontFamily="@font/encoded_sans_semi_bold"
+        android:textSize="@dimen/text_regular"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRoomAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="161.42"
+        android:layout_alignBottom="@id/tvRoomAverage"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_medium_2"
+        android:textColor="@color/black"
+        android:fontFamily="@font/encoded_sans_semi_bold"
+        android:textSize="@dimen/text_regular_2x"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSgd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SGD"
+        android:layout_alignBottom="@id/tvRoomAverage"
+        android:layout_toStartOf="@id/tvRoomAmount"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:textColor="@color/black"
+        android:fontFamily="@font/encoded_sans_semi_bold"
+        android:textSize="@dimen/text_small"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="@dimen/margin_medium_2"
+        android:background="@color/black"
+        android:layout_below="@id/tvRoomAverage"
+        android:layout_marginTop="@dimen/margin_medium_2"/>
+
+
+
+</RelativeLayout>

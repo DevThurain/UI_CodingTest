@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_medium_2"
+    android:layout_marginHorizontal="@dimen/margin_medium_2"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/layoutVoucher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dotted_background"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvVoucher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:fontFamily="@font/encoded_sans_semi_bold"
+            android:text="YOUR E-VOUCHER RATE"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvVoucher"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:fontFamily="@font/encoded_sans_semi_bold"
+            android:text="Mobile App Special Voucher"
+            android:textSize="@dimen/text_regular_2x"
+            />
+
+        <LinearLayout
+            android:id="@+id/layoutFeatureGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvRate"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@mipmap/fnb" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/encoded_sans_regular"
+                    android:textSize="@dimen/text_small"
+                    android:textAlignment="center"
+                    android:text="Inclusive of\nBreakfast"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    app:srcCompat="@mipmap/workout" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/encoded_sans_regular"
+                    android:textSize="@dimen/text_small"
+                    android:textAlignment="center"
+                    android:text="20% off\nIn Rom Service"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tvRoomFacilities"
+                    android:layout_alignParentEnd="true"
+                    android:text="View Rates"
+                    android:layout_gravity="end"
+                    app:backgroundTint="@null"
+                    android:textColor="@color/red"
+                    android:background="@drawable/background_button"
+                    android:layout_marginEnd="@dimen/margin_medium_2"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/layoutFeatureGroup"
+            android:background="@color/black"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRoomAverage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Avg. Night / Room From"
+            android:layout_marginStart="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:textColor="@color/black"
+            android:layout_below="@id/divider"
+            android:fontFamily="@font/encoded_sans_semi_bold"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            android:textSize="@dimen/text_regular"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRoomAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="161.42"
+            android:layout_alignBottom="@id/tvRoomAverage"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_medium_2"
+            android:textColor="@color/black"
+            android:fontFamily="@font/encoded_sans_semi_bold"
+            android:textSize="@dimen/text_regular_2x"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSgd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SGD"
+            android:layout_alignBottom="@id/tvRoomAverage"
+            android:layout_toStartOf="@id/tvRoomAmount"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:textColor="@color/black"
+            android:fontFamily="@font/encoded_sans_semi_bold"
+            android:textSize="@dimen/text_small"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/tvRoomAverage"
+            app:cornerRadius="0dp"
+            android:text="MEMBERS DEALS"
+            android:fontFamily="@font/encoded_sans_bold"
+            app:icon="@mipmap/add"
+            app:iconGravity="textStart"
+            app:iconTint="@color/black"
+            app:iconSize="28dp"
+            android:textColor="@color/black"
+            android:layout_marginHorizontal="@dimen/margin_small"
+            app:backgroundTint="@color/yellow"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
